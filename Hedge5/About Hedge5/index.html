@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Hedge5</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: rgb(10, 26, 40);
+      color: #ffffff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 30px;
+    }
+
+    h1, h2, h3, h4 {
+      color: #00d4ff;
+      transition: transform 0.3s ease, background-position 2s ease;
+      background: linear-gradient(270deg, #00d4ff, #00b3e6, #0099cc, #00d4ff);
+      background-size: 800% 800%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 60px;
+      font-size: 3em;
+    }
+
+    h1:hover, h2:hover, h3:hover, h4:hover {
+      transform: scale(1.05);
+      animation: gradientShift 5s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    section {
+      margin-bottom: 80px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section img {
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    section img:hover {
+      transform: scale(1.03);
+    }
+
+    .horizontal-pair {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .horizontal-pair img {
+      width: 400px;
+    }
+
+    .horizontal-pair p {
+      flex: 1;
+    }
+
+    .industry-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    .industry-box {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      width: 30%;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .industry-box:hover {
+      transform: translateY(-5px);
+      background-color: rgba(0, 212, 255, 0.1);
+    }
+
+    .slider-container {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    .slider-track {
+      display: flex;
+      width: max-content;
+      animation: scrollGallery 30s linear infinite;
+      gap: 30px;
+    }
+
+    .slider-track img {
+      height: 300px;
+      width: auto;
+      border-radius: 10px;
+      flex-shrink: 0;
+      object-fit: cover;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    @keyframes scrollGallery {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .footer {
+      text-align: center;
+      padding: 40px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 60px;
+      position: relative;
+    }
+
+    .footer img.logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    .footer .tagline {
+      margin-bottom: 20px;
+      font-size: 1.1em;
+      color: #cccccc;
+    }
+
+    .footer .social-icons img {
+      width: 30px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+
+    .footer .rights {
+      font-size: 0.9em;
+      color: #aaa;
+      position: absolute;
+      right: 30px;
+      bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .horizontal-pair {
+        flex-direction: column;
+      }
+
+      .horizontal-pair img {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .industry-box {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>About Hedge5</h1>
+
+    <section>
+      <h2>Born from Observation, Driven by Vision</h2>
+      <p>At Hedge5, our journey began with a simple but profound observation—the world is facing a climate crisis. The growing impact of greenhouse gas emissions and the deteriorating state of our planet compelled our founders to act. They envisioned a world where sustainability wasn’t an afterthought, but a central part of every business model. Hedge5 was created to turn that vision into a movement—one that empowers companies and individuals to actively combat climate change.</p>
+
+      <div class="slider-container">
+        <div class="slider-track">
+          <img src="achnt1.jpeg">
+          <img src="achnt2.jpeg">
+          <img src="achnt3.jpeg">
+          <img src="achnt4.jpeg">
+          <img src="achnt5.jpeg">
+          <img src="https://source.unsplash.com/300x200/?green">
+          <img src="https://source.unsplash.com/300x200/?eco">
+          <img src="https://source.unsplash.com/300x200/?solar">
+          <img src="https://source.unsplash.com/300x200/?wind">
+          <img src="https://source.unsplash.com/300x200/?earth">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Our Mission</h2>
+      <div class="horizontal-pair">
+        <img src="renew.webp" alt="Our Mission">
+        <p><strong>Mission 01:</strong> Cut Emissions at the Source – We provide businesses with actionable tools, strategic insights, and technological solutions to significantly reduce their carbon footprint.<br><br><strong>Mission 02:</strong> Neutralize Existing Carbon – We offer access to verified, high-impact carbon offset programs that remove carbon dioxide from the atmosphere and restore ecosystems.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Who We Serve</h2>
+      <div class="industry-row">
+        <div class="industry-box"><strong>Manufacturing & Production</strong><br>Optimize energy use, integrate renewables, reduce emissions.</div>
+        <div class="industry-box"><strong>Mining & Resources</strong><br>Sustainable practices, reduced water use, carbon capture.</div>
+        <div class="industry-box"><strong>Transportation</strong><br>Electrify fleets, optimize routes, build green infrastructure.</div>
+        <div class="industry-box"><strong>Aviation</strong><br>Sustainable fuels, efficiency, offset programs.</div>
+        <div class="industry-box"><strong>Construction</strong><br>Green materials, energy-efficient design, reduced water usage.</div>
+        <div class="industry-box"><strong>Energy</strong><br>Transition to renewable sources, optimize current systems.</div>
+        <div class="industry-box"><strong>Agriculture</strong><br>Water conservation, regenerative practices, lower chemical use.</div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div class="tagline">Hedge5 leads the way in decarbonization with a data-driven approach, helping businesses and individuals make a real impact.</div>
+      <img src="logodark.png" alt="Hedge5 Logo" class="logo">
+      <div class="social-icons">
+        <a href="https://www.instagram.com/hedge5" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/company/hedge5" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+        </a>
+      </div>
+      <div class="rights">© 2025 Hedge5. All rights reserved.</div>
+    </div>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
