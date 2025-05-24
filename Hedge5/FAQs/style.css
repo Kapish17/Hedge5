@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0d1b2a;
+  color: #ffffff;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #e0e1dd;
+}
+
+.faq-item {
+  background-color: #1b263b;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.faq-question {
+  padding: 18px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  color: #e0e1dd;
+  font-size: 1.1rem;
+  position: relative;
+  transition: background 0.3s, color 0.3s;
+}
+
+.faq-question:hover {
+  background-color: #2c3e50;
+  color: #ffffff;
+}
+
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.faq-question.active::after {
+  content: '-';
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, padding 0.4s ease;
+  padding: 0 20px;
+  background-color: #415a77;
+  color: #f8f9fa;
+}
+
+.faq-answer.open {
+  padding: 15px 20px 20px 20px;
+}
+
+.faq-answer p {
+  margin: 0 0 10px 0;
+}
+
+.faq-answer ul {
+  margin: 10px 0 15px 20px;
+}
+
+/* Footer Styles */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a1a2f; /* dark blue */
+  color: #fff;
+}
+
+.site-footer {
+  background-color: #030b16; /* darker than dark blue */
+  padding: 40px 20px 20px;
+  text-align: center;
+  color: #c0c5ce;
+  font-size: 0.95rem;
+  margin-top: 60px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo img {
+  max-width: 160px;
+  height: auto;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
+}
+
+/* Social Icons */
+.footer-socials a {
+  margin: 0 12px;
+  font-size: 1.6rem;
+  color: #ffffff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #00acee;
+  transform: scale(1.1);
+}
+
+/* Copyright */
+.footer-copy {
+  margin-top: 25px;
+  color: #8998ab;
+  font-size: 0.9rem;
+}
+
+.footer-socials a {
+  margin: 0 10px;
+  font-size: 1.6rem;
+  color: #ffffff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #00acee; /* Light blue hover */
+  transform: scale(1.15);
+}
+
+
+
