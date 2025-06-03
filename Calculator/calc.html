@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Plant Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Solar Plant Calculator</h1>
+            <p>Calculate your solar plant capacity, costs, and environmental impact based on your monthly electricity bill</p>
+        </header>
+
+        <div class="calculator-card">
+            <h2>Project Details</h2>
+            <form id="solarForm">
+                <div class="input-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" placeholder="Enter location">
+                </div>
+                
+                <div class="input-group">
+                    <label for="coordinates">Coordinates</label>
+                    <input type="text" id="coordinates" placeholder="Lat, Long">
+                </div>
+                
+                <div class="input-group">
+                    <label for="monthlyBill">Monthly Bill (₹)</label>
+                    <input type="number" id="monthlyBill" placeholder="Enter amount" required>
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit" class="btn-calculate">Calculate</button>
+                    <button type="button" id="resetBtn" class="btn-reset" style="display: none;">Reset</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="resultsSection" class="results-section" style="display: none;">
+            <div class="project-summary">
+                <h3>Project Summary</h3>
+                <div class="summary-grid">
+                    <div><strong>Location:</strong> <span id="displayLocation">-</span></div>
+                    <div><strong>Coordinates:</strong> <span id="displayCoordinates">-</span></div>
+                    <div><strong>Monthly Bill:</strong> <span id="displayBill">-</span></div>
+                </div>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="icon daily-consumption"></div>
+                    <div class="result-content">
+                        <h4>Daily Consumption</h4>
+                        <p class="result-value" id="dailyConsumption">-</p>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <div class="icon plant-capacity"></div>
+                    <div class="result-content">
+                        <h4>Plant Capacity</h4>
+                        <p class="result-value" id="plantCapacity">-</p>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <div class="icon contract-load"></div>
+                    <div class="result-content">
+                        <h4>Contract Load</h4>
+                        <p class="result-value" id="contractLoad">-</p>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <div class="icon cost-per-kw"></div>
+                    <div class="result-content">
+                        <h4>Cost per kW</h4>
+                        <p class="result-value" id="costPerKW">-</p>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <div class="icon total-cost"></div>
+                    <div class="result-content">
+                        <h4>Total Plant Cost</h4>
+                        <p class="result-value" id="totalCost">-</p>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <div class="icon co2-savings"></div>
+                    <div class="result-content">
+                        <h4>CO₂ Savings</h4>
+                        <p class="result-value" id="co2Savings">-</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="environmental-impact">
+                <h3>Environmental Impact</h3>
+                <p id="environmentalText">-</p>
+                <p id="treesEquivalent">-</p>
+            </div>
+
+            <div class="export-section">
+                <h3>Export Results</h3>
+                <p>Download or print your solar calculation results</p>
+                <div class="export-buttons">
+                    <button onclick="printResults()" class="btn-print">Print Results</button>
+                    <button onclick="downloadExcel()" class="btn-excel">Download Excel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="calc.js"></script>
+</body>
+</html>
